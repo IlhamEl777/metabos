@@ -78,7 +78,7 @@ class MetaBossBot:
                 data = json.loads(open("data.json", "r").read())
                 login_data = data
                 ws = websocket.WebSocket()
-                ws.connect("wss://api.metaboss.xyz:2000/game", timeout=10)
+                ws.connect("wss://apiv2.metaboss.xyz:2000/game", timeout=10)
                 ws.send(json.dumps(login_data))
                 result = ws.recv()
                 res = json.loads(result)
